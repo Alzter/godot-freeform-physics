@@ -1,0 +1,110 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/gui/player_planel/variable_changer.tscn" type="PackedScene" id=1]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+anchor_bottom = 1.0
+margin_right = 230.0
+rect_min_size = Vector2( 150, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 12.0
+margin_top = 12.0
+margin_right = -12.0
+margin_bottom = -12.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+margin_right = 206.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+text = "Player Properties:"
+align = 1
+
+[node name="VariableChange" parent="Panel/VBoxContainer" instance=ExtResource( 1 )]
+margin_right = 206.0
+variable_to_change = "MOVE_SPEED"
+label_text = "Move Speed"
+maximum_value = 3000
+
+[node name="VariableChange8" parent="Panel/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 106.0
+margin_right = 206.0
+margin_bottom = 154.0
+variable_to_change = "ACCELERATION"
+label_text = "Acceleration"
+maximum_value = 1
+
+[node name="VariableChange3" parent="Panel/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 158.0
+margin_right = 206.0
+margin_bottom = 206.0
+variable_to_change = "JUMP_HEIGHT"
+label_text = "Jump Height"
+maximum_value = 3000
+
+[node name="VariableChange2" parent="Panel/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 210.0
+margin_right = 206.0
+margin_bottom = 258.0
+variable_to_change = "CEILING_SPEED"
+label_text = "Minimum Ceiling Spd."
+maximum_value = 3000
+
+[node name="VariableChange7" parent="Panel/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 262.0
+margin_right = 206.0
+margin_bottom = 310.0
+variable_to_change = "GRAVITY"
+label_text = "Gravity"
+maximum_value = 10000
+
+[node name="VariableChange4" parent="Panel/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 314.0
+margin_right = 206.0
+margin_bottom = 362.0
+variable_to_change = "MAX_ANGLE"
+label_text = "Max Slope Angle"
+maximum_value = 2
+
+[node name="VariableChange5" parent="Panel/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 366.0
+margin_right = 206.0
+margin_bottom = 414.0
+variable_to_change = "SLOPE_ACCELERATION"
+label_text = "Slope Acceleration"
+maximum_value = 10000
+
+[node name="VariableChange6" parent="Panel/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 418.0
+margin_right = 206.0
+margin_bottom = 466.0
+variable_to_change = "SLOPE_DECELERATION"
+label_text = "Slope Deceleration"
+maximum_value = 10000
+
+[node name="Label2" type="Label" parent="Panel"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -122.0
+text = "E: TOGGLE EDIT MODE
+Left Click: Place Terrain
+Right Click: Erase Terrain
+Middle Click: Spawn Player
+Mouse Wheel: Change Size
+
+WASD: Move player"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
